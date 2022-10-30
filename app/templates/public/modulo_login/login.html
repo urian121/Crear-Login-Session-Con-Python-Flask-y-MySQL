@@ -1,0 +1,25 @@
+
+<h1 class="mb-5" id="title">Login con Python Flask y MySQL <hr> </h1>
+<form action="{{ url_for('loginUser') }}" method="POST" autocomplete="off">
+    <div class="mb-6">
+        <label for="email" class="form-label">Escribir tu Email</label>
+        <input type="email" name="email" id="email" class="form-control" required="true">
+    </div>
+    <div class="mb-6">
+        <label for="password" class="form-label mt-4">Escribe tu Password</label>
+        <input type="password" name="password" class="form-control" required="true">
+    </div>
+
+    <div class="d-grid gap-2 mt-3 mb-3">
+        <button type="submit" class="btn btn-primary btn-send">Entrar Ahora!</button>
+    </div>
+
+    <div class="mb-12">
+        <span>
+            No tienes Cuenta?
+        </span>
+        <a href="#" id="link_sign_up" class="createUser">
+            Crear cuenta
+        </a>
+    </div>
+</form>

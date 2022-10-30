@@ -1,0 +1,36 @@
+{% extends 'public/modulo_login/base_login.html' %}
+{% block title %}Login | Urian{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <div class="row justify-content-md-center mt-5 mb-5">
+
+    <!--Login-->
+    <div class="col-md-6 cajaLogin" id="styleLogin">
+      <div class="mb-12">
+        <a href="{{ url_for('inicio') }}">
+            <img src="{{url_for('static', filename ='assets/imgs/logo.png') }}" alt="Logo" class="logoLogin">
+        </a>
+    </div>
+      {% include 'public/modulo_login/login.html' %}
+    </div>
+
+
+    <!---Register User-->
+    <div class="col-md-6 formRegisterUser" id="styleLogin" style="display:none;">
+      <a href="{{ url_for('inicio') }}">
+        <img src="{{url_for('static', filename ='assets/imgs/logo.png') }}" alt="Logo" class="logoLogin">
+      </a>
+      {% include 'public/modulo_login/registerUser.html' %}
+    </div>
+    <!---fin register User-->
+
+  </div>
+</div>
+
+<!---Mensales - alertas-->
+{% include 'public/dashboard/pages/alerts.html' %}
+
+
+{% endblock %}

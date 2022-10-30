@@ -1,0 +1,60 @@
+
+  <div class="row justify-content-center">
+    <div class="col-md-12 mb-2">
+      <h1 class="text-center">Hola Comunidad, sientanse todos Bienvenidos  😃 👍 <hr></h1>
+      {% if(dataLogin.tipoLogin ==1) %}
+          <p class="text-center">Hola Soy <strong> {{ dataLogin.nombre }},</strong> Creador del Proyecto.😅 </p>
+        {% else %}
+          <p class="text-center">Hola mi nombre es <strong>{{ dataLogin.nombre }},</strong> soy un usuario. </p>
+      {% endif %}
+    </div>
+
+    <!--Tarjeta 1-->
+    <div class="col-md-3">
+      <div class="recipe one">
+        <div class="wrapper">
+          <div class="recipe-header">
+            <span>WebDeveloper</span>
+            <div class="rating">4.8</div>
+          </div>
+          <div class="recipe-info">
+            <span>Ing. Urian Viera</span>
+            <div class="time">15 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Tarjeta 2-->
+    <div class="col-md-3">
+      <div class="recipe two">
+        <div class="wrapper">
+          <div class="recipe-header">
+            <span>WebDeveloper</span>
+            <div class="rating">4.8</div>
+          </div>
+          <div class="recipe-info">
+            <span>Ing. Urian Viera</span>
+            <div class="time">15 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Tarjeta 3-->
+    <div class="col-md-3">
+      <div class="recipe first">
+        <div class="wrapper">
+          <div class="recipe-header">
+            <span>WebDeveloper</span>
+            <div class="rating">4.8</div>
+          </div>
+          <div class="recipe-info">
+            <span>Ing. Urian Viera</span>
+            <div class="time">15 min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

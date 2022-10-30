@@ -1,0 +1,90 @@
+{% extends 'public/dashboard/home.html' %}
+{% block title %}Perfil | {{ dataUser.nombre }} {% endblock %}
+
+{% block body %}
+<!-- {{  session }} -->
+
+<div class="row justify-content-md-center mb-5">
+
+    <div class="col-md-10 cajaLogin styFormDashboard">
+        <h2 class="text-center titleDashboard mt-3">Editar mi Perfil <hr> </h2>
+            <form action='{{url_for("actualizarMiPerfil",id=dataUser.id)}}' method="POST" autocomplete="off">
+           
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Nombre" class="form-label mt-3">Nombre de Usuario</label>
+                    <input type="text" name="nombre" value="{{ dataUser.nombre }}" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="Apellido" class="form-label mt-3">Apellido de Usuario</label>
+                    <input type="text" name="apellido" value="{{ dataUser.apellido }}" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Email" class="form-label mt-3">Email</label>
+                    <input type="email" name="email" value="{{ dataUser.email }}" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="Password" class="form-label mt-3" style="color:crimson;">Nueva Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="repite_password" class="form-label mt-3" style="color:crimson;">Repetir Password</label>
+                    <input type="password" name="repite_password" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="Country" class="form-label mt-3">País</label>
+                    <select name="pais" class="form-control">
+                        {% for country in dataPaises %}
+                            {% if(dataUser.pais == country.name_country) %}
+                                <option selected value="{{ country.name_country }}">{{ country.name_country }}</option>
+                            {% else %}
+                            <option value="{{ country.name_country }}">{{ country.name_country }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="sex" class="mt-3">Sexo</label>
+                    <br>  
+                    {% if(dataUser.sexo=='Masculino') %}
+                        <div class="form-check form-check-inline">
+                            <input checked name="sexo" class="form-check-input" type="radio" id="Masculino" value="Masculino">
+                            <label class="form-check-label" for="Masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name="sexo" class="form-check-input" type="radio" id="Femenino" value="Femenino">
+                            <label class="form-check-label" for="Femenino">Femenino</label>
+                        </div> 
+                    {% else %}
+                        <div class="form-check form-check-inline">
+                            <input name="sexo" class="form-check-input" type="radio" id="Masculino" value="Masculino">
+                            <label class="form-check-label" for="Masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input checked name="sexo" class="form-check-input" type="radio" id="Femenino" value="Femenino">
+                            <label class="form-check-label" for="Femenino">Femenino</label>
+                        </div> 
+                    {% endif %}
+                </div>
+            </div>
+     
+            <div class="row text-center justify-content-md-center mt-4">
+                <div class="col-md-12 mt-3 mb-3">
+                    <button type="submit" class="btn btn-primary btn-send">Guardar Cambios</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

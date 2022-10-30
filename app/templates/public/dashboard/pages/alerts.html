@@ -1,0 +1,31 @@
+<!---Mi alertas-->
+{% if (typeAlert==1) %}
+<div class="toast_alert active">
+    <div class="toast_alert-content">
+        <i class="bi bi-check check"></i>
+
+        <div class="message">
+            <span class="text text-1">Felicitaciones 😃</span>
+            <span class="text text-2">{{ msjAlert }}</span>
+        </div>
+    </div>
+    <i class="bi bi-x close"></i>
+    <div class="progress active"></div>
+</div>
+{% endif %}
+
+{% if(typeAlert ==0) %}
+<div class="toast_alert active">
+    <div class="toast_alert-content">
+        <i class="bi bi-check check"></i>
+
+        <div class="message">
+            <span class="text text-1">Error 😱</span>
+            <span class="text text-2">{{ msjAlert }}</span>
+        </div>
+    </div>
+    <i class="bi bi-x close"></i>
+    <div class="progress active"></div>
+</div>
+{% endif %}
+<!---Fin Alertas-->

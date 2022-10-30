@@ -1,0 +1,113 @@
+.toast_alert {
+    z-index: 999999;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+
+    animation: efectoBounce .3s ease alternate;
+    /*animation: efectoBounce .3s ease infinite alternate; */
+}
+
+.toast_alert.active {
+    transform: translateX(0%);
+    display: block;
+}
+
+.toast_alert .toast_alert-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast_alert-content .check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    background-color: #24bca6;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.toast_alert-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+}
+
+.toast_alert .close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 17px;
+    border-radius: 50%;
+    background: #f2f2f2;
+    transition: all 0.3s ease;
+}
+
+.toast_alert .close:hover {
+    background-color: #cecece;
+}
+
+.toast_alert .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+}
+
+.toast_alert .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #24bca6;
+}
+
+.progress.active:before {
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        right: 100%;
+    }
+}
+
+
+
+@keyframes efectoBounce{
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-10px);}
+  }
+  

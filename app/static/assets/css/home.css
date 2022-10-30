@@ -1,0 +1,105 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #F4F4F4 !important;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.form-label {
+    margin-bottom: 0px !important;
+}
+
+.btn-send {
+    border-radius: 25px;
+    background-color: #fde74c;
+    border: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.btn-send:hover {
+    background-color: #fade0a;
+    color: #333 !important;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#title {
+    color: #36BCA7;
+    text-align: center;
+    margin-top: -80px;
+    font-weight: 600;
+}
+
+#link_forgot_password {
+    color: #6EC1E4;
+    padding: 0px 15px
+}
+
+#link_sign_up {
+    color: #6EC1E4;
+}
+
+#link_sign_up:hover {
+    color: #fde74c;
+    font-weight: 500;
+}
+
+#link_forgot_password:hover {
+    color: #fde74c;
+    font-weight: 500;
+}
+
+#styleLogin {
+    margin-top: 50px !important;
+    background: #f9f9f9;
+    padding: 30px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.bi-arrow-left-short {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333;
+}
+
+#here{
+    color: #36BCA7;
+}
+#here:hover{
+    color: #fde74c !important;
+}
+.styFormDashboard{
+    background: #f9f9f9;
+    padding: 30px 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.logoLogin{
+    width: 100%;
+    height:100px; 
+    width:100px;
+    border-radius:50%;
+    position: relative;
+    top: -80px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1000px) {
+    #styleLogin{
+        margin: 0 auto;
+        width: 35% !important;
+    }
+}
+@media (min-width: 280px) and (max-width: 680px) {
+    #styleLogin{
+        margin: 0 auto;
+        width: 80% !important;
+    }
+}

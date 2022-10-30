@@ -1,0 +1,82 @@
+
+<h1 class="mb-3" id="title">Crear cuenta de Usuario <hr> </h1>
+<form name="formRegisterClient" id="formRegisterClient" action="{{ url_for('registerUser') }}" method="POST" class="mt-5" autocomplete="off">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="nombre" class="form-label">Primer Nombre</label>
+            <input type="text" name="nombre" class="form-control" autofocus required>
+        </div>
+        <div class="col-md-6">
+            <label for="apellido" class="form-label">Primer Apellido</label>
+            <input type="text" name="apellido" class="form-control" required>
+        </div>
+    </div>
+
+    <div class="mb-6">
+        <label for="email" class="form-label mt-3">Email</label>
+        <input type="email" name="email" class="form-control" required>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label for="password" class="form-label mt-3">Password</label>
+            <input type="password" name="password" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+            <label for="repite_password" class="form-label mt-3">Repetir Password</label>
+            <input type="password" name="repite_password" class="form-control" required>
+        </div>
+    </div>
+
+
+    <div class="container" style="padding-right:0px !important;padding-left:0px !important">
+        <div class="row">
+          <div class="col-md-6">
+                <label for="sexo" class="mt-3">Sexo</label>
+                <select name="sexo" class="form-control" required>
+                    <option value="" selected="selected">--- Seleccione ---</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="brand" class="mt-3" >Te gusta la Programación?</label> <br>
+                <div class="form-check form-check-inline">
+                    <input checked class="form-check-input" type="radio" name="te_gusta_la_programacion" id="Si" value="Si">
+                    <label class="form-check-label" for="Si">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="te_gusta_la_programacion" id="No" value="No">
+                    <label class="form-check-label" for="No">No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-6">
+        <label for="pais" class="form-label mt-3">País de Nacimiento</label>
+        <select name="pais" class="form-control" required>
+            <option value="" selected="selected">--- Seleccione ---</option>
+              {% for country in dataPaises %}
+                    <option value="{{ country.name_country }}">{{ country.name_country }}</option>
+              {% endfor %}
+        </select>
+    </div>
+
+    
+    <div class="d-grid gap-2 mt-3 mb-3">
+        <input type="submit" class="btn btn-primary btn-send" id="sendForm" value="Crear Ahora!">
+    </div>
+
+    <div class="mb-12">
+        <span>
+            Ya tengo cuenta, 
+        </span>
+        
+        <a href="#" style="color: #555;" class="volverViewLogin">
+            <i class="bi bi-arrow-left-short"></i>
+            Volver
+        </a>
+
+    </div>
+</form>
