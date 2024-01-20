@@ -1,41 +1,32 @@
-# Login con PYTHON - FLASK y MYSQL
-Crear Login-Session Con Python Flask y MySQL
-Login con PYTHON - FLASK y MYSQL
+### Crear Login con PYTHON - FLASK y MYSQL
+
+Este proyecto proporciona un sistema de inicio de sesión implementado con Python Flask y MySQL.
+
+### PASO 1: Crear entorno virtual
+	python -m venv env
 
 
+### PASO 2: Activar el entorno virtual
+	. env/Scripts/activate
 
-# PASO 1, Crear mi entorno virtual
+### PASO 3: Instalar Flask
+	pip install flask
 
-`python -m venv env `
+### PASO 4: Instalar Python MySQL Connector
+	pip install mysql-connector-python
 
-# PASO 2, Activar el entorno virtual ejecutando;
+### Crear/Actualizar el archivo requirements.txt
+pip freeze > requirements.txt
 
-`. env/Scripts/activate`
+## IMPORTANTE: Para ejecutar el proyecto, instalar dependencias desde requirements.txt
 
-# PASO 3, Ya dentro del entorno virtual instalar flask
+pip install -r requirements.txt
 
-`pip install flask`
+#### Correr el proyecto
+	python app.py
 
-# PASO 4, Instalar Python MySQL Connector, es una bibliote (Driver) para conectar Python con MySQL
+Visitar la url: http://127.0.0.1:8000
 
-`pip install mysql-connector-python`
 
-# PASO 5, Lista todos mis paquetes
+![](https://raw.githubusercontent.com/urian121/imagenes-proyectos-github/master/login-python-flask-y-mysql.png)
 
-`pip list  o pip freeze`
-
-# Crear/Actualizar el fichero requirements.txt:
-
-`pip freeze > requirements.txt`
-
-# (env)$ deactivate Para desactivar nuestro entono virtual
-
-# IMPORTANTE, para correr el proyecto solo debes ejecutar el archivo
-
-# requirements.txt con el comando;
-
-`pip install -r requirements.txt`
-
-# en el mismo se encuentran todas las dependecias del proyecto.
-
-# Nota: cuando valla hacer una actualizacion del archivo requirements.txt debo estar dentro de mi entorno virtual pero no dentro de la carpera app solo en mi entorno.
