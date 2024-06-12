@@ -86,7 +86,7 @@ def registerUser():
             msg = 'El formulario no debe estar vacio!'
         else:
             # La cuenta no existe y los datos del formulario son válidos,
-            password_encriptada = generate_password_hash(password, method='sha256')
+            password_encriptada = generate_password_hash(password, method='scrypt')
             conexion_MySQLdb = connectionBD()
             cursor = conexion_MySQLdb.cursor(dictionary=True)
             cursor.execute('INSERT INTO login_python (tipo_user, nombre, apellido, email, password, sexo, pais, create_at, te_gusta_la_programacion) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)', (tipo_user, nombre, apellido, email, password_encriptada, sexo, pais, create_at, te_gusta_la_programacion))
